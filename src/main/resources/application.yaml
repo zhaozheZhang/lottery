@@ -1,0 +1,16 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  datasource:
+    username: root
+    password: 123456
+    #mysql8版本以上的驱动包，需要指定以下时区
+    url: jdbc:mysql://60.205.183.94:3306/demo3?serverTimezone=GMT%2B8
+    #mysql8版本以上指定新的驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  type-aliases-package: com.system.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
