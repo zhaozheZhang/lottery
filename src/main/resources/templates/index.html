@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+        <!-- Bootstrap core CSS -->
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    </head>
+    <body>
+        <a class="btn btn-sm btn-primary" th:href="@{/emp/}">单次抽奖</a>
+<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">1000次并发</a>-->
+<!--        <a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.getId()}">10000次并发</a>-->
+<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">10000次并发</a>-->
+<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">100000次并发</a>-->
+    </body>
+</html>
