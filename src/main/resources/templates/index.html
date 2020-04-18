@@ -9,10 +9,42 @@
         <link th:href="@{/css/dashboard.css}" rel="stylesheet">
     </head>
     <body>
-        <a class="btn btn-sm btn-primary" th:href="@{/emp/}">单次抽奖</a>
-<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">1000次并发</a>-->
-<!--        <a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.getId()}">10000次并发</a>-->
-<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">10000次并发</a>-->
-<!--        <a class="btn btn-sm btn-danger" th:href="@{/deleteEmployee/}+${emp.getId()}">100000次并发</a>-->
+        <p>5%一等奖</p>
+        <p>10%二等奖</p>
+        <p>15%一等奖</p>
+        <a class="btn btn-sm btn-primary" th:href="@{/1/}">单次抽奖</a>
+        <a class="btn btn-sm btn-danger" th:href="@{/1000/}">1000次并发</a>
+        <a class="btn btn-sm btn-danger" th:href="@{/10000/}">10000次并发</a>
+        <a class="btn btn-sm btn-danger" th:href="@{/100000/}">100000次并发</a>
+
+        <h2 th:text="${info}">info</h2>
+
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>用户id</th>
+                <th>奖项</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="a : ${st1}">
+                <td th:text="${a}"></td>
+                <td th:text="一等奖"></td>
+            </tr>
+            <tr th:each="b : ${st2}">
+                <td th:text="${b}"></td>
+                <td th:text="二等奖"></td>
+            </tr>
+            <tr th:each="c : ${st3}">
+                <td th:text="${c}"></td>
+                <td th:text="三等奖"></td>
+            </tr>
+            <tr th:each="d : ${noAward}">
+                <td th:text="${d}"></td>
+                <td th:text="没有中奖"></td>
+            </tr>
+            </tbody>
+        </table>
+
     </body>
 </html>
